@@ -1,6 +1,7 @@
 import { Loader } from '@mantine/core'
 import { useQuery } from '@tanstack/react-query'
 import { useParams } from 'react-router-dom'
+
 import { postService } from 'service/post'
 
 export default function Post() {
@@ -20,8 +21,9 @@ export default function Post() {
 
     return (
         <div>
-            <div>{data?.id}</div>
-            <div>{data?.text}</div>
+            <div>{data?.data.id}</div>
+            <div>{data?.data.attributes.title}</div>
+            <div>{data?.data.attributes.content}</div>
         </div>
     )
 }

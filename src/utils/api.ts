@@ -19,8 +19,8 @@ export const api = axios.create({
 
 api.interceptors.response.use(
     ({ data }) => {
-        if (data.success) {
-            return data.data
+        if (data) {
+            return data
         } else {
             throw data.msg
         }

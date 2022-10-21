@@ -1,5 +1,3 @@
-type IProps = {}
-
-export default function Home({}: IProps) {
+export default function Home() {
     return <div>Home</div>
 }
